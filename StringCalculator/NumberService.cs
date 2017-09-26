@@ -8,7 +8,7 @@ namespace StringCalculator
 {
     public class NumberService : INumberServiceV1
     {
-        private char[] _defaultDelimeter => new[] { ',', '\n' }; 
+        private static char[] _defaultDelimeter => new[] { ',', '\n' }; 
 
         List<int> INumberServiceV1.GetNumbersListFromInput(string input)
         {
@@ -42,7 +42,7 @@ namespace StringCalculator
             }                
         }
 
-        private void ValidateNoNewlLineAfterDelimeter(string numbers, char[] delimeters)
+        private static void ValidateNoNewlLineAfterDelimeter(string numbers, char[] delimeters)
         {
             foreach (var delimeter in delimeters)
             {
@@ -51,7 +51,7 @@ namespace StringCalculator
             }
         }
 
-        private char[] GetDelimeters(string input)
+        private static char[] GetDelimeters(string input)
         {
             return Regex
                 .Match(input, @"\/\/(?<delimeter>.*)\n")
@@ -60,7 +60,7 @@ namespace StringCalculator
                 .ToCharArray();
         }
 
-        private string GetNumbersWithoutDelimeter(string input)
+        private static string GetNumbersWithoutDelimeter(string input)
         {
             return Regex
                 .Match(input, @"\/\/(.*)\n(?<numbers>.*)")

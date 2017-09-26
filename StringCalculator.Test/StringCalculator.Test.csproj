@@ -59,7 +59,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="StringCalculatorTestModule.cs" />
-    <Compile Include="Calculator\CalculatorService_Tests.cs" />
+    <Compile Include="Calculator\Calculator_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

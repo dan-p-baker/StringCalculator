@@ -4,7 +4,7 @@ namespace StringCalculator
 {
     public class Calculator : ICalculatorV1
     {
-        private INumberServiceV1 _numberService; 
+        private readonly INumberServiceV1 _numberService; 
         public Calculator(INumberServiceV1 numberService)
         {
             _numberService = numberService;
