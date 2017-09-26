@@ -7,7 +7,7 @@ namespace StringCalculator.Test
     [TestFixture]
     public class Calculator_Tests
     {
-        ICalculatorV1 _calculator;
+        private static ICalculatorV1 _calculator;
 
         [SetUp]
         public void SetUp()
